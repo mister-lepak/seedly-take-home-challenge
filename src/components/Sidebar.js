@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const Sidebar = () => {
   const [topics, setTopics] = useState();
 
-  const getData = () => {
+  const getTopics = () => {
     fetch("models/topics.json", {
       headers: {
         "Content-Type": "application/json",
@@ -19,8 +19,7 @@ const Sidebar = () => {
   };
 
   useEffect(() => {
-    getData();
-    console.log(topics);
+    getTopics();
   }, []);
 
   const renderTopic = () => {
