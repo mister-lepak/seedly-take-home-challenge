@@ -25,3 +25,7 @@ Data Structure (models)
    - This model is the data source for the questions posted and linked to tagged topics and answers
 4. Answers
    - This model is the data source for the answers posted and linked to related questions and users who answered
+
+Dependencies
+
+- Moment.js
