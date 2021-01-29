@@ -5,12 +5,20 @@ import QnA from "./components/QnA";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Banner />
-      <Sidebar />
-      <QnA />
-    </>
+    <div className="ui grid">
+      <div className="ui row">
+        <Navbar />
+      </div>
+      <div className="ui row">
+        <Banner />
+      </div>
+      <div className="ui three wide column">
+        <Sidebar />
+      </div>
+      <div className="ui ten wide column">
+        <QnA />
+      </div>
+    </div>
   );
 }
 
