@@ -17,7 +17,10 @@ const Navbar = () => {
       <a className="item">Utilities & Bills</a>
       <a className="item">Insurance</a>
       <a className="item">...</a>
-      <input className="item"></input>
+      <div className=" ui left icon input">
+        <i className="search icon"></i>
+        <input type="text"></input>
+      </div>
       <button className="ui button item">Join</button>
     </div>
   );

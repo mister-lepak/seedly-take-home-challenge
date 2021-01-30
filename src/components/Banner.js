@@ -20,7 +20,9 @@ const Banner = (props) => {
       <header className="banner ui sixteen wide column center aligned">
         <h1>{displayHeader}</h1>
         <h3>{displaySubHeader}</h3>
-        <button className="ui primary basic button">Ask Question</button>
+        <button className="ui circular primary basic button">
+          Ask Question
+        </button>
       </header>
     </>
   );

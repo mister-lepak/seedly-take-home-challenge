@@ -121,7 +121,7 @@ const QnA = (props) => {
     return users.map((user) => {
       if (selectedAnswer[0].user === user.id) {
         return (
-          <div className="ui event raised segment">
+          <div className="ui event raised segment answers">
             <div className="label">
               <img src={user.avatar} />
             </div>
@@ -136,11 +136,19 @@ const QnA = (props) => {
               </div>
               <div className="extra-text">{selectedAnswer[0].content}</div>
               <div className="meta">
-                <i className="comment icon"></i>
+                <button className="circular ui basic icon button">
+                  <i className="comment icon"></i>
+                </button>
                 {selectedAnswer[0].comments_num}
-                <i className="share alternate icon"></i>
-                <i className="bookmark icon"></i>
-                <i className="thumbs up icon"></i> {selectedAnswer[0].likes}
+                <button className="circular ui basic icon button">
+                  <i className="share alternate icon"></i>
+                </button>
+                <button className="circular ui basic icon button">
+                  <i className="bookmark icon"></i>
+                </button>
+                <button className="circular ui basic icon right floated button">
+                  <i className="thumbs up icon"></i> {selectedAnswer[0].likes}
+                </button>
               </div>
             </div>
           </div>
@@ -158,15 +166,17 @@ const QnA = (props) => {
           <div className="ui container segment">
             {renderQuestionTopics(question)}
             <h3>{question.title}</h3>
-
-            <p>
-              <button>Follow</button>
-              {countAnswers(question)} Answers
-              <span>
+            <div className="ui row">
+              <button className="ui basic circular left floated button">
+                Follow
+              </button>
+              <button className="ui circular basic right floated button">
                 <i className="share alternate icon"></i>
-              </span>
-            </p>
-
+              </button>
+              <button className="ui basic right floated button">
+                {countAnswers(question)} Answers
+              </button>
+            </div>
             <div className="ui feed">{renderFeaturedAnswer(question)}</div>
           </div>
         );
@@ -177,13 +187,16 @@ const QnA = (props) => {
               {renderQuestionTopics(question)}
               <h3>{question.title}</h3>
 
-              <p>
-                <button>Follow</button>
+              <button className="ui basic circular left floated button">
+                Follow
+              </button>
+
+              <button className="ui circular basic right floated button">
+                <i className="share alternate icon"></i>
+              </button>
+              <button className="ui basic right floated button">
                 {countAnswers(question)} Answers
-                <span>
-                  <i className="share alternate icon"></i>
-                </span>
-              </p>
+              </button>
 
               <div className="ui feed">{renderFeaturedAnswer(question)}</div>
             </div>

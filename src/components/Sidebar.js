@@ -23,7 +23,7 @@ const Sidebar = (props) => {
         <h1>My Topics</h1>
         <p>Have a topic in mind?</p>
         <p>Follow some topics and they'll show up here.</p>
-        <button className="ui basic button">
+        <button className="ui circular basic button">
           <i className="icon compass " />
           Discover Topics
         </button>

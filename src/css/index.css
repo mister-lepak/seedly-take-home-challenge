@@ -12,8 +12,10 @@ body {
 }
 
 .banner {
-  padding: 30px;
+  padding: 50px;
   background-image: url("../images/banner_default.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
 }
 
@@ -29,4 +31,12 @@ body {
 
 .ui.grid {
   padding-right: 15px;
+}
+
+.ui.feed {
+  padding-top: 50px;
+}
+
+.ui.feed > .event:first-child.answers {
+  padding: 10px;
 }
