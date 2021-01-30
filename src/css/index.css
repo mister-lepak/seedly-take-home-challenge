@@ -33,7 +33,7 @@ body {
 #advertisement {
   background-image: url("../images/QnA_Image.jpg");
   background-repeat: no-repeat;
-  background-size: 70%;
+  background-size: 100%;
 }
 
 .ui.grid {
