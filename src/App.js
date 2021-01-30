@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Sidebar from "./components/Sidebar";
 import QnA from "./components/QnA";
+import qnaAd from "./images/QnA Advertisement.jpg";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
       </div>
       <div className="ui ten wide column">
         <QnA />
+      </div>
+      <div className="ui three wide column">
+        <img src={qnaAd}></img>
       </div>
     </div>
   );
