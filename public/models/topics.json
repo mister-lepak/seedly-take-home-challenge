@@ -1,22 +1,46 @@
 [
-  { "name": "Investments" },
-  { "name": "Stocks Investing" },
-  { "name": "Savings" },
-  { "name": "ETF" },
-  { "name": "Robo-Advisors" },
-  { "name": "Lifestyle" },
+  { "name": "Investments", "content": "Growing your money for your future" },
+  {
+    "name": "Stocks Investing",
+    "content": "*Disclosure*: The threads on this post are just opinions on investments, so please do your own due diligence before investing"
+  },
+  {
+    "name": "Savings",
+    "content": "Managing your cashflow"
+  },
+  { "name": "ETF", "content": "Build a diversified portfolio" },
+  { "name": "Robo-Advisors", "content": "Invest in low cost diversified ETFs" },
+  { "name": "Lifestyle", "content": "Save time. Spend smarter." },
   { "name": "Online Brokerages" },
-  { "name": "Retirement" },
+  {
+    "name": "Retirement",
+    "content": "Making sure you have enough for the later years"
+  },
   { "name": "Syfe" },
-  { "name": "CPF" },
-  { "name": "Brokerages" },
-  { "name": "Promo Codes" },
-  { "name": "Insurance" },
-  { "name": "In the News" },
-  { "name": "Property" },
-  { "name": "Career" },
-  { "name": "Fresh Graduates" },
-  { "name": "Tiger Brokers" },
-  { "name": "S&P 500 Index" },
-  { "name": "Savings Accounts" }
+  {
+    "name": "CPF",
+    "content": "Every Singaporean's contribution till 55 and beyond"
+  },
+  { "name": "Brokerages", "content": "" },
+  {
+    "name": "Promo Codes",
+    "content": "Post your promotional/referral codes here and help us save as a community!"
+  },
+  { "name": "Insurance", "content": "Protecting you for the rainy days" },
+  {
+    "name": "In the News",
+    "content": "Following the latest news in Singapore, Asia and the World"
+  },
+  { "name": "Property", "content": "A roof above your head or more?" },
+  { "name": "Career", "content": "Your biggest income source at the start" },
+  {
+    "name": "Fresh Graduates",
+    "content": "Young adults out into the working world"
+  },
+  {
+    "name": "Tiger Brokers",
+    "content": "For all Tiger Brokers related discussions"
+  },
+  { "name": "S&P 500 Index", "content": "" },
+  { "name": "Savings Accounts", "content": "Optimising your savings rates" }
 ]
