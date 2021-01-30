@@ -36,7 +36,7 @@ body {
   background-size: 100%;
 }
 
-.ui.grid {
+#qna > .ui.grid {
   padding-right: 15px;
 }
 
@@ -50,6 +50,22 @@ body {
 
 .ui.vertical.menu {
   width: 12rem;
+}
+
+#footer {
+  margin-top: 20px;
+  width: 100%;
+  background-color: rgb(83, 88, 95);
+  color: white;
+}
+
+#footer > .ui.grid > .column a {
+  color: white;
+}
+
+#subFooter {
+  width: 100%;
+  background-color: rgb(55, 58, 61);
 }
 
 @media only screen and (max-width: 850px) {

@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Sidebar from "./components/Sidebar";
 import QnA from "./components/QnA";
+import Footer from "./components/Footer";
 import indexCSS from "./css/index.css";
 
 function App(props) {
@@ -21,6 +22,7 @@ function App(props) {
         <QnA chosenTopic={chosenTopic} />
       </div>
       <div id="advertisement" className="ui two wide column"></div>
+      <Footer />
     </div>
   );
 }
