@@ -26,8 +26,6 @@ const QnA = () => {
   const [questions, setQuestions] = useState();
   const [answers, setAnswers] = useState();
   const [users, setUsers] = useState();
-  const [relatedAnswers, setRelatedAnswers] = useState([]);
-  const today = new Date();
 
   const getQuestions = () => {
     fetch("models/questions.json", {
@@ -98,29 +96,49 @@ const QnA = () => {
     return count;
   };
 
-  const assessDate = () => {
-    const todayDate = moment(today);
-    answers.map((answer) => {
-      const answerDate = moment(answer.date);
-      const deltaDay = todayDate.diff(answerDate, "days");
-      if (deltaDay < 1) {
-        console.log(answerDate.startOf("day").fromNow());
-      }
-    });
+  const assessDate = (inputDate) => {
+    const answerDate = moment(inputDate);
+    return answerDate.startOf("day").fromNow();
   };
 
   const renderFeaturedAnswer = (question) => {
-    // setRelatedAnswers([]);
     const relatedAnswers = [];
     answers.map((answer) => {
       if (answer.question_id === question.id) {
-        // setRelatedAnswers((relatedAnswers) => [...relatedAnswers, answer]);
         relatedAnswers.push(answer);
       }
     });
     const selectedAnswer = selectFeaturedAnswer(relatedAnswers);
 
-    return <div className="ui card"></div>;
+    return users.map((user) => {
+      if (selectedAnswer[0].user === user.id) {
+        return (
+          <div className="ui event segment">
+            <div className="label">
+              <img src={user.avatar} />
+            </div>
+            <div className="content">
+              <div className="summary">
+                <a className="user">{user.full_name}</a>
+              </div>
+              <div className="date">
+                <p className="user">
+                  {user.level} Answered {assessDate(selectedAnswer[0].date)}
+                </p>
+              </div>
+              <div className="extra-text">{selectedAnswer[0].content}</div>
+              <div className="meta">
+                <i className="comment icon"></i>
+                {selectedAnswer[0].comments_num}
+                <i className="share alternate icon"></i>
+                <i className="bookmark icon"></i>
+                <i className="thumbs up icon"></i> {selectedAnswer[0].likes}
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
   };
 
   const renderQuestions = () => {
@@ -139,7 +157,7 @@ const QnA = () => {
             </span>
           </p>
 
-          {renderFeaturedAnswer(question)}
+          <div className="ui feed">{renderFeaturedAnswer(question)}</div>
         </div>
       );
     });
@@ -153,6 +171,7 @@ const QnA = () => {
         <a className="item">Trending</a>
         <a className="item">Editoral</a>
       </div>
+
       {renderQuestions()}
     </div>
   );
