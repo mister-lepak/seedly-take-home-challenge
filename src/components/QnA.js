@@ -1,10 +1,32 @@
 import { useEffect, useState } from "react";
 import moment from "moment";
 
+export const selectFeaturedAnswer = (relatedAnswersInput) => {
+  let contender = [
+    {
+      id: "",
+      likes: 0,
+      date: "2000-01-01T00:00:00.000Z",
+    },
+  ];
+
+  relatedAnswersInput.map((element) => {
+    const dateDiff = moment(contender.date).diff(
+      moment(element.date),
+      "minutes"
+    );
+    if (element.likes >= contender[0].likes) {
+      contender[0] = element;
+    }
+  });
+  return contender;
+};
+
 const QnA = () => {
   const [questions, setQuestions] = useState();
   const [answers, setAnswers] = useState();
   const [users, setUsers] = useState();
+  const [relatedAnswers, setRelatedAnswers] = useState([]);
   const today = new Date();
 
   const getQuestions = () => {
@@ -87,7 +109,19 @@ const QnA = () => {
     });
   };
 
-  const renderFeaturedAnswer = (question) => {};
+  const renderFeaturedAnswer = (question) => {
+    // setRelatedAnswers([]);
+    const relatedAnswers = [];
+    answers.map((answer) => {
+      if (answer.question_id === question.id) {
+        // setRelatedAnswers((relatedAnswers) => [...relatedAnswers, answer]);
+        relatedAnswers.push(answer);
+      }
+    });
+    const selectedAnswer = selectFeaturedAnswer(relatedAnswers);
+
+    return <div className="ui card"></div>;
+  };
 
   const renderQuestions = () => {
     if (!questions || !answers || !users) return <></>;
@@ -105,7 +139,7 @@ const QnA = () => {
             </span>
           </p>
 
-          {renderFeaturedAnswer()}
+          {renderFeaturedAnswer(question)}
         </div>
       );
     });
