@@ -5,20 +5,10 @@ import { selectFeaturedAnswer } from "./components/QnA";
 test("Checks if react is rendered", () => {
   render(<App />);
   const item = screen.getByText("Let's Talk Finance");
-  // const node1 = screen.getByText(/Syfe/i);
-  // const node2 = screen.getByText(/Online Brokerages/i);
-  // const node3 = screen.getByText(/S&P 500 Index/i);
-  // const node4 = screen.getByText(/Robo-Advisors/i);
-  // const node5 = screen.getByText(/ETF/i);
   expect(item).toBeInTheDocument();
-  // expect(node2.closest("header")).toBeInTheDocument();
-  // expect(node3.closest("header")).toBeInTheDocument();
-  // expect(node4.closest("header")).toBeInTheDocument();
-  // expect(node5.closest("header")).toBeInTheDocument();
 });
 
 test("Featured answers selection", () => {
-  // dataInput assumed to be simplified with only related answers filtered and provided to function
   const dataInput = [
     {
       id: "b7f273c0-ac05-4372-b8cd-aa82b87ffcab",
