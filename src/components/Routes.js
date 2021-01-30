@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import App from "../App";
 
@@ -11,6 +11,7 @@ const Routes = () => {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
+      mode: "cors",
     })
       .then((response) => {
         return response.json();
@@ -31,18 +32,22 @@ const Routes = () => {
         <Route
           exact
           path={"/" + topic.name}
-          component={() => <App chosenTopic={topic.name} />}
+          component={() => <App chosenTopic={topic.name} topics={topics} />}
         />
       );
     });
   };
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
-        <Route exact path={"/"} component={() => <App chosenTopic="" />} />
+        <Route
+          exact
+          path={"/"}
+          component={() => <App chosenTopic="" topics={topics} />}
+        />
         {topicsRoutes()}
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

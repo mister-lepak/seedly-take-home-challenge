@@ -1,10 +1,15 @@
 import logo from "../images/seedly-logo-blue.webp";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="ui top fixed menu">
-      <img src={logo}></img>
-      <a className="item">Community</a>
+      <Link to="/">
+        <img src={logo}></img>
+      </Link>
+      <Link to="/" className="item">
+        Community
+      </Link>
       <a className="item">Content</a>
       <a className="item">Banking</a>
       <a className="item">Cards</a>

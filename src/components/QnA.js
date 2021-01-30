@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import moment from "moment";
 
 export const selectFeaturedAnswer = (relatedAnswersInput) => {
@@ -87,9 +88,9 @@ const QnA = (props) => {
     return question.topics.map((topic) => {
       return (
         <>
-          <a className="ui button" href={"/" + topic}>
+          <Link className="ui button" to={"/" + topic}>
             {topic}
-          </a>
+          </Link>
         </>
       );
     });
@@ -120,7 +121,7 @@ const QnA = (props) => {
     return users.map((user) => {
       if (selectedAnswer[0].user === user.id) {
         return (
-          <div className="ui event segment">
+          <div className="ui event raised segment">
             <div className="label">
               <img src={user.avatar} />
             </div>
