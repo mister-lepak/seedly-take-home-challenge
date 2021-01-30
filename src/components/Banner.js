@@ -1,4 +1,3 @@
-import bannerPicture from "../images/banner_default.svg";
 import indexCSS from "../css/index.css";
 
 const Banner = ({ topics, chosenTopic }) => {
@@ -7,6 +6,7 @@ const Banner = ({ topics, chosenTopic }) => {
     "Ask for opinions and get answers from other Singaporeans.";
 
   if (chosenTopic !== "") {
+    if (!topics) return <></>;
     topics.map((topic) => {
       if (chosenTopic === topic.name) {
         displayHeader = topic.name;

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
 
@@ -27,67 +26,12 @@ export const selectFeaturedAnswer = (relatedAnswersInput) => {
   return contender;
 };
 
-const QnA = ({ chosenTopic }) => {
-  const [questions, setQuestions] = useState();
-  const [answers, setAnswers] = useState();
-  const [users, setUsers] = useState();
-
-  const getQuestions = () => {
-    fetch("models/questions.json", {
-      headers: {
-        "Content-type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setQuestions(data);
-      });
-  };
-
-  const getAnswers = () => {
-    fetch("models/answers.json", {
-      headers: {
-        "Content-type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setAnswers(data);
-      });
-  };
-
-  const getUsers = () => {
-    fetch("models/users.json", {
-      headers: {
-        "Content-type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setUsers(data);
-      });
-  };
-
-  useEffect(() => {
-    getQuestions();
-    getAnswers();
-    getUsers();
-  }, []);
-
+const QnA = ({ chosenTopic, answers, questions, users }) => {
   const renderQuestionTopics = (question) => {
     return question.topics.map((topic) => {
       return (
         <>
-          <Link className="ui button" to={"/" + topic}>
+          <Link className="ui button" to={"/topic/" + topic}>
             {topic}
           </Link>
         </>

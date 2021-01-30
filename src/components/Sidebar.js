@@ -6,7 +6,7 @@ const Sidebar = ({ topics }) => {
     return topics.map((topic) => {
       return (
         <div className="item">
-          <Link to={"/" + topic.name}>{topic.name}</Link>
+          <Link to={"/topic/" + topic.name}>{topic.name}</Link>
         </div>
       );
     });
