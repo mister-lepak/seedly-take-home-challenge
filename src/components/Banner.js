@@ -1,8 +1,7 @@
 import bannerPicture from "../images/banner_default.svg";
 import indexCSS from "../css/index.css";
 
-const Banner = (props) => {
-  const { topics, chosenTopic } = props;
+const Banner = ({ topics, chosenTopic }) => {
   let displayHeader = "Let's Talk Finance";
   let displaySubHeader =
     "Ask for opinions and get answers from other Singaporeans.";

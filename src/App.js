@@ -5,8 +5,7 @@ import QnA from "./components/QnA";
 import Footer from "./components/Footer";
 import indexCSS from "./css/index.css";
 
-function App(props) {
-  const { chosenTopic, topics } = props;
+function App({ chosenTopic, topics }) {
   return (
     <div className="ui grid">
       <div className="ui row">

@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Sidebar = (props) => {
-  const { topics } = props;
-
+const Sidebar = ({ topics }) => {
   const renderTopic = () => {
     if (!topics) return <></>;
     return topics.map((topic) => {

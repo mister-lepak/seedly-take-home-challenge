@@ -27,11 +27,10 @@ export const selectFeaturedAnswer = (relatedAnswersInput) => {
   return contender;
 };
 
-const QnA = (props) => {
+const QnA = ({ chosenTopic }) => {
   const [questions, setQuestions] = useState();
   const [answers, setAnswers] = useState();
   const [users, setUsers] = useState();
-  const { chosenTopic } = props;
 
   const getQuestions = () => {
     fetch("models/questions.json", {
