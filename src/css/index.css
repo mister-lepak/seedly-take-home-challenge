@@ -3,8 +3,15 @@ body {
   height: 100%; /*Fixes the height to 100% of the viewport*/
 }
 body {
-  padding-top: 50px; /*50px for the height of the navbar + 37px for the offset*/
+  padding-top: 25px; /*50px for the height of the navbar + 37px for the offset*/
   padding-bottom: 50px; /*50px for the height of the bottom navbar*/
+}
+
+#mobileNav {
+  display: none;
+}
+#desktopNav {
+  display: flex;
 }
 
 .ui.grid > .row {
@@ -23,7 +30,7 @@ body {
   background: white !important;
 }
 
-.advertisement {
+#advertisement {
   background-image: url("../images/QnA_Image.jpg");
   background-repeat: no-repeat;
   background-size: 70%;
@@ -39,4 +46,26 @@ body {
 
 .ui.feed > .event:first-child.answers {
   padding: 10px;
+}
+
+.ui.vertical.menu {
+  width: 12rem;
+}
+
+@media only screen and (max-width: 850px) {
+  #sidebar {
+    display: none;
+  }
+  #advertisement {
+    display: none;
+  }
+  #qna {
+    width: 100%;
+  }
+  #desktopNav {
+    display: none;
+  }
+  #mobileNav {
+    display: flex;
+  }
 }

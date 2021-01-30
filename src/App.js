@@ -14,13 +14,13 @@ function App(props) {
       <div className="ui row">
         <Banner chosenTopic={chosenTopic} topics={topics} />
       </div>
-      <div className="ui three wide column">
+      <div id="sidebar" className="ui three wide column">
         <Sidebar topics={topics} />
       </div>
-      <div className="ui ten wide column">
+      <div id="qna" className="ui centered eleven wide column">
         <QnA chosenTopic={chosenTopic} />
       </div>
-      <div className="advertisement ui three wide column"></div>
+      <div id="advertisement" className="ui two wide column"></div>
     </div>
   );
 }
