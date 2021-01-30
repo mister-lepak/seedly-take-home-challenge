@@ -11,21 +11,26 @@ export const selectFeaturedAnswer = (relatedAnswersInput) => {
   ];
 
   relatedAnswersInput.map((element) => {
-    const dateDiff = moment(contender.date).diff(
+    const dateDiff = moment(contender[0].date).diff(
       moment(element.date),
-      "minutes"
+      "days"
     );
-    if (element.likes >= contender[0].likes) {
+    if (element.likes > contender[0].likes) {
       contender[0] = element;
+    } else if (element.likes === contender[0].likes) {
+      if (dateDiff < 0) {
+        contender[0] = element;
+      }
     }
   });
   return contender;
 };
 
-const QnA = () => {
+const QnA = (props) => {
   const [questions, setQuestions] = useState();
   const [answers, setAnswers] = useState();
   const [users, setUsers] = useState();
+  const { chosenTopic } = props;
 
   const getQuestions = () => {
     fetch("models/questions.json", {
@@ -82,7 +87,9 @@ const QnA = () => {
     return question.topics.map((topic) => {
       return (
         <>
-          <button className="ui button">{topic}</button>
+          <a className="ui button" href={"/" + topic}>
+            {topic}
+          </a>
         </>
       );
     });
@@ -141,25 +148,47 @@ const QnA = () => {
     });
   };
 
-  const renderQuestions = () => {
+  const renderQuestions = (chosenTopic) => {
     if (!questions || !answers || !users) return <></>;
-    return questions.map((question, index) => {
-      return (
-        <div className="ui container segment">
-          {renderQuestionTopics(question)}
-          <h3>{question.title}</h3>
 
-          <p>
-            <button>Follow</button>
-            {countAnswers(question)} Answers
-            <span>
-              <i className="share alternate icon"></i>
-            </span>
-          </p>
+    return questions.map((question) => {
+      if (chosenTopic === "") {
+        return (
+          <div className="ui container segment">
+            {renderQuestionTopics(question)}
+            <h3>{question.title}</h3>
 
-          <div className="ui feed">{renderFeaturedAnswer(question)}</div>
-        </div>
-      );
+            <p>
+              <button>Follow</button>
+              {countAnswers(question)} Answers
+              <span>
+                <i className="share alternate icon"></i>
+              </span>
+            </p>
+
+            <div className="ui feed">{renderFeaturedAnswer(question)}</div>
+          </div>
+        );
+      } else {
+        if (question.topics.includes(chosenTopic)) {
+          return (
+            <div className="ui container segment">
+              {renderQuestionTopics(question)}
+              <h3>{question.title}</h3>
+
+              <p>
+                <button>Follow</button>
+                {countAnswers(question)} Answers
+                <span>
+                  <i className="share alternate icon"></i>
+                </span>
+              </p>
+
+              <div className="ui feed">{renderFeaturedAnswer(question)}</div>
+            </div>
+          );
+        }
+      }
     });
   };
 
@@ -172,7 +201,7 @@ const QnA = () => {
         <a className="item">Editoral</a>
       </div>
 
-      {renderQuestions()}
+      {renderQuestions(chosenTopic)}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [topics, setTopics] = useState();
@@ -25,13 +26,19 @@ const Sidebar = () => {
   const renderTopic = () => {
     if (!topics) return <></>;
     return topics.map((topic, index) => {
-      return <a className="item">{topic.name}</a>;
+      return (
+        <div className="item">
+          <a href={"/" + topic.name}>{topic.name}</a>
+        </div>
+      );
     });
   };
 
   return (
     <div className="ui vertical menu">
-      <a className="item">All Content</a>
+      <a className="item" href="/">
+        All Content
+      </a>
       <div className="item">
         <h1>My Topics</h1>
         <p>Have a topic in mind?</p>
