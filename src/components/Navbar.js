@@ -18,7 +18,7 @@ const Navbar = () => {
         <a className="item">Utilities & Bills</a>
         <a className="item">Insurance</a>
         <a className="item">...</a>
-        <div className=" ui left icon input">
+        <div className=" ui left icon input right menu">
           <i className="search icon"></i>
           <input
             type="text"
@@ -31,14 +31,18 @@ const Navbar = () => {
         <Link to="/" className="item">
           <img src={logo}></img>
         </Link>
-        <div className="ui left icon input item">
-          <i className="search icon"></i>
-          <input
-            type="text"
-            placeholder="Find product review, questions or articles"
-          ></input>
+        <div className="right menu">
+          <div className="item">
+            <div className="ui mini left icon input">
+              <i className="search icon"></i>
+              <input
+                type="text"
+                placeholder="Find product review, questions or articles"
+              ></input>
+            </div>
+          </div>
+          <button className="ui left floated button item">Join</button>
         </div>
-        <button className="ui left floated button item">Join</button>
       </div>
     </>
   );
