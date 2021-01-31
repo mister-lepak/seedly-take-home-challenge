@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
-import { selectFeaturedAnswer } from "./components/QnA";
+import { selectFeaturedAnswer } from "./components/util";
 
 test("Checks if react is rendered", () => {
   render(<App />);

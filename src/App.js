@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 import QnA from "./components/QnA";
 import Footer from "./components/Footer";
 import indexCSS from "./css/index.css";
-import useFetch from "./components/util";
+import { useFetch } from "./components/util";
 
 function App({ match }) {
   let {
@@ -24,15 +24,23 @@ function App({ match }) {
   const [topics, topicsLoading, topicsHasError] = useFetch(
     "models/topics.json"
   );
+  const [comments, commentsLoading, commentsHasError] = useFetch(
+    "models/comments.json"
+  );
 
   return (
     <>
-      {questionsLoading || answersLoading || usersLoading || topicsLoading ? (
+      {questionsLoading ||
+      answersLoading ||
+      usersLoading ||
+      topicsLoading ||
+      commentsLoading ? (
         <div>Loading...</div>
       ) : questionsHasError ||
         answersHasError ||
         usersHasError ||
-        topicsHasError ? (
+        topicsHasError ||
+        commentsHasError ? (
         <div>Error Occured.</div>
       ) : (
         <main className="ui grid">
@@ -52,6 +60,7 @@ function App({ match }) {
               questions={questions}
               answers={answers}
               users={users}
+              comments={comments}
             />
           </section>
           <aside id="advertisement" className="ui two wide column"></aside>

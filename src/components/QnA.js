@@ -1,33 +1,11 @@
 import { Link } from "react-router-dom";
-import moment from "moment";
-import AnswerText from "./AnswerText";
+import SmartText from "./SmartText";
+import Comments from "./Comments";
+import { countAnswers } from "./util";
+import { useState } from "react";
+import FeaturedAnswer from "./FeaturedAnswer";
 
-export const selectFeaturedAnswer = (relatedAnswersInput) => {
-  let contender = [
-    {
-      id: "",
-      likes: 0,
-      date: "2000-01-01T00:00:00.000Z",
-    },
-  ];
-
-  relatedAnswersInput.map((element) => {
-    const dateDiff = moment(contender[0].date).diff(
-      moment(element.date),
-      "days"
-    );
-    if (element.likes > contender[0].likes) {
-      contender[0] = element;
-    } else if (element.likes === contender[0].likes) {
-      if (dateDiff < 0) {
-        contender[0] = element;
-      }
-    }
-  });
-  return contender;
-};
-
-const QnA = ({ chosenTopic, topics, answers, questions, users }) => {
+const QnA = ({ chosenTopic, topics, answers, questions, users, comments }) => {
   const renderQuestionTopics = (question) => {
     return question.topics.map((topic) => {
       return topics.map((element) => {
@@ -42,69 +20,6 @@ const QnA = ({ chosenTopic, topics, answers, questions, users }) => {
         }
         return <></>;
       });
-    });
-  };
-
-  const countAnswers = (question) => {
-    let count = 0;
-    answers.map((answer) => {
-      if (answer.question_id === question.id) count = count + 1;
-    });
-    return count;
-  };
-
-  const assessDate = (inputDate) => {
-    const answerDate = moment(inputDate);
-    return answerDate.startOf("day").fromNow();
-  };
-
-  const renderFeaturedAnswer = (question) => {
-    const relatedAnswers = [];
-    answers.map((answer) => {
-      if (answer.question_id === question.id) {
-        relatedAnswers.push(answer);
-      }
-    });
-    const selectedAnswer = selectFeaturedAnswer(relatedAnswers);
-
-    return users.map((user) => {
-      if (selectedAnswer[0].user === user.id) {
-        return (
-          <article className="ui event raised segment answers">
-            <div className="label">
-              <img src={user.avatar} />
-            </div>
-            <div className="content">
-              <div className="summary">
-                <a className="user">{user.full_name}</a>
-              </div>
-              <div className="date">
-                <p className="user">
-                  {user.level} Answered {assessDate(selectedAnswer[0].date)}
-                </p>
-              </div>
-              <div className="extra-text">
-                <AnswerText text={selectedAnswer[0].content} />
-              </div>
-              <div className="meta">
-                <button className="circular ui basic icon button">
-                  <i className="comment icon"></i>
-                </button>
-                {selectedAnswer[0].comments_num}
-                <button className="circular ui basic icon button">
-                  <i className="share alternate icon"></i>
-                </button>
-                <button className="circular ui basic icon button">
-                  <i className="bookmark icon"></i>
-                </button>
-                <button className="circular ui basic icon right floated button">
-                  <i className="thumbs up icon"></i> {selectedAnswer[0].likes}
-                </button>
-              </div>
-            </div>
-          </article>
-        );
-      }
     });
   };
 
@@ -125,11 +40,16 @@ const QnA = ({ chosenTopic, topics, answers, questions, users }) => {
                 <i className="share alternate icon"></i>
               </button>
               <button className="ui basic right floated button">
-                {countAnswers(question)} Answers
+                {countAnswers(question, answers)} Answers
               </button>
             </article>
             <article className="ui feed">
-              {renderFeaturedAnswer(question)}
+              <FeaturedAnswer
+                question={question}
+                answers={answers}
+                users={users}
+                comments={comments}
+              />
             </article>
           </article>
         );
@@ -156,7 +76,12 @@ const QnA = ({ chosenTopic, topics, answers, questions, users }) => {
               </button>
 
               <article className="ui feed">
-                {renderFeaturedAnswer(question)}
+                <FeaturedAnswer
+                  question={question}
+                  answers={answers}
+                  users={users}
+                  comments={comments}
+                />
               </article>
             </article>
           );
