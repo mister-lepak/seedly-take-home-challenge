@@ -1,11 +1,11 @@
 # Seedly Frontend Take-Home Challenge
 
-Instructions to Seedly take-home challenge can be found in Instructions.md
+Instructions to Seedly take-home challenge can be found in [Instructions.md](https://github.com/mrlepak/seedly-take-home-challenge/blob/main/Instructions.md)
 
 ## Dev Setup
 
 - Install React at least version 17.0.1
-- Install ReactJS dependency libraries “npm install”
+- Install ReactJS dependency libraries npm install
 
 ## Running the app or View the app
 
@@ -15,6 +15,22 @@ Instructions to Seedly take-home challenge can be found in Instructions.md
    https://mrlepak.github.io/test_for_ghpages/#/
 
 ## Design
+
+## Delivery Details
+
+This application built with following functions as per instructions stated in [Instructions.md](https://github.com/mrlepak/seedly-take-home-challenge/blob/main/Instructions.md). Key highlights below:
+
+- [x] Rendering of UI (navbar, banner, sidebar, Q&As, Advertisement, Footer)
+- [x] Sidebar and tags links are able to filter the related questions
+- [x] Featured answer assessment capabilitiy is brought forward to frontend
+      -- Assuming data received from backend are not processed
+      -- This is done with the motivation of showcasing data cleaning capability in this code challenge
+      -- Featured answer's selection criteria is as per [Seedly's FAQ](https://support.seedly.sg/hc/en-us/articles/900003311886-Managing-your-Questions-and-Answers)
+      --- Assuming all mock data only consists of non-Verified Business Profile
+      --- Featured answer is based on the most upvoted answer
+      --- If answers have equal upvotes, then the most recent one is shown
+- [x] Answer contents/texts shown partially by default to provide UI space (user has choice to expand the text)
+- [x] Comments sections are provided, comments are sorted and shown partially by default to provide UI space (user has choice to expand the text)
 
 Data Structure (models)
 

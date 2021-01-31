@@ -1,0 +1,69 @@
+# Model Structure
+
+This document tabulates all data designed in each models together with its linkages.
+
+- Topic
+  - id
+    - Type: String
+    - ID is to make each topic unique and identifier
+  - name
+    - Type: String
+    - Name to describe the topic
+- Question
+  - id
+    - Type: String
+    - ID is to make each question unique and identifier
+  - title
+    - Type: String
+    - Title of the question
+  - topics
+    - Type: Array of Object IDs linked to Topic Model
+    - Topics that are tagged to this question
+- Answer
+  - id
+    - Type: String
+    - ID is to make each answer unique and identifier
+  - content
+    - Type: String
+    - Content of the answer
+  - question_id
+    - Type: Object ID linked to Question Model
+    - Question related to this posted answer
+  - likes
+    - Type: Int
+    - Count number of likes
+  - user
+    - Type: Object ID linked to User Model
+    - The user who responded to the question
+  - date
+    - Type: MongoDB ISO date
+    - Date of the answer created
+- Users
+  - ID
+    - type: String
+    - ID is to make each user unique and identifier
+  - name
+    - Type: String
+    - Name of user
+  - Level
+    - Type: String
+    - Level of user, for simplicity of this code challenge. it was mocked with random movie title
+  - avatar
+    - Type: image
+    - Avatar of user
+- Comments
+  - ID
+    - type: String
+    - ID is to make each comment unique and identifier
+  - content
+    - Type: String
+    - Content of the comment
+  - date
+    - Type: MongoDB ISO date
+    - Date of the comment created
+  - user
+    - Type: Object ID linked to User Model
+    - The user who responded to the answer
+  - answer
+    - Type: Object ID linked to Answers Model
+    - Answer related to this posted comment
