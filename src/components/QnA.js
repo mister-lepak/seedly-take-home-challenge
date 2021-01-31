@@ -32,7 +32,6 @@ const QnA = ({ chosenTopic, topics, answers, questions, users }) => {
     return question.topics.map((topic) => {
       return topics.map((element) => {
         if (topic === element.id) {
-          // console.log(element.name);
           return (
             <>
               <Link className="ui button" to={"/topic/" + element.name}>
@@ -68,7 +67,7 @@ const QnA = ({ chosenTopic, topics, answers, questions, users }) => {
     });
     const selectedAnswer = selectFeaturedAnswer(relatedAnswers);
 
-    return users.map((user, index) => {
+    return users.map((user) => {
       if (selectedAnswer[0].user === user.id) {
         return (
           <article className="ui event raised segment answers">
