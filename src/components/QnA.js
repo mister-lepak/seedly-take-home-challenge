@@ -27,16 +27,22 @@ export const selectFeaturedAnswer = (relatedAnswersInput) => {
   return contender;
 };
 
-const QnA = ({ chosenTopic, answers, questions, users }) => {
+const QnA = ({ chosenTopic, topics, answers, questions, users }) => {
   const renderQuestionTopics = (question) => {
     return question.topics.map((topic) => {
-      return (
-        <>
-          <Link className="ui button" to={"/topic/" + topic}>
-            {topic}
-          </Link>
-        </>
-      );
+      return topics.map((element) => {
+        if (topic === element.id) {
+          // console.log(element.name);
+          return (
+            <>
+              <Link className="ui button" to={"/topic/" + element.name}>
+                {element.name}
+              </Link>
+            </>
+          );
+        }
+        return <></>;
+      });
     });
   };
 
@@ -129,7 +135,11 @@ const QnA = ({ chosenTopic, answers, questions, users }) => {
           </article>
         );
       } else {
-        if (question.topics.includes(chosenTopic)) {
+        let chosenTopicId = "";
+        topics.map((topic) => {
+          if (topic.name === chosenTopic) chosenTopicId = topic.id;
+        });
+        if (question.topics.includes(chosenTopicId)) {
           return (
             <article className="ui container segment">
               {renderQuestionTopics(question)}

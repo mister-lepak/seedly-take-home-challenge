@@ -1,46 +1,94 @@
 [
-  { "name": "Investments", "content": "Growing your money for your future" },
   {
+    "id": "e2df1d4c-1d96-4fbf-a5e2-e5826cf5d910",
+    "name": "Investments",
+    "content": "Growing your money for your future"
+  },
+  {
+    "id": "66a45c18-b6c2-464c-b735-ce668552a6bb",
     "name": "Stocks Investing",
     "content": "*Disclosure*: The threads on this post are just opinions on investments, so please do your own due diligence before investing"
   },
   {
+    "id": "397a557f-31ba-4474-840f-537f95336769",
     "name": "Savings",
     "content": "Managing your cashflow"
   },
-  { "name": "ETF", "content": "Build a diversified portfolio" },
-  { "name": "Robo-Advisors", "content": "Invest in low cost diversified ETFs" },
-  { "name": "Lifestyle", "content": "Save time. Spend smarter." },
-  { "name": "Online Brokerages" },
   {
+    "id": "22264fd7-3f8e-4513-a9c2-54a1b0dfacca",
+    "name": "ETF",
+    "content": "Build a diversified portfolio"
+  },
+  {
+    "id": "fcb7c50b-c2ea-403a-bc78-97ce4edf4faa",
+    "name": "Robo-Advisors",
+    "content": "Invest in low cost diversified ETFs"
+  },
+  {
+    "id": "3f0f6459-d4f1-421d-9f18-23e45cc2fe43",
+    "name": "Lifestyle",
+    "content": "Save time. Spend smarter."
+  },
+  { "id": "aefb8e9d-84e6-4119-aa12-06f0e9e2765d", "name": "Online Brokerages" },
+  {
+    "id": "435e8900-936a-444c-a569-00798b7e1e2f",
     "name": "Retirement",
     "content": "Making sure you have enough for the later years"
   },
-  { "name": "Syfe" },
+  { "id": "1615d596-b319-4efc-ace9-9a652db7db34", "name": "Syfe" },
   {
+    "id": "fe1e5857-d51f-47c0-ab20-e4ab4cfd5dc8",
     "name": "CPF",
     "content": "Every Singaporean's contribution till 55 and beyond"
   },
-  { "name": "Brokerages", "content": "" },
   {
+    "id": "8318f3b7-a5ff-44dd-b83a-f163f26fe02c",
+    "name": "Brokerages",
+    "content": ""
+  },
+  {
+    "id": "62495692-11f2-4b58-b752-323e1a71c6d3",
     "name": "Promo Codes",
     "content": "Post your promotional/referral codes here and help us save as a community!"
   },
-  { "name": "Insurance", "content": "Protecting you for the rainy days" },
   {
+    "id": "53bc2f69-2c10-4442-9687-ece86dc64e98",
+    "name": "Insurance",
+    "content": "Protecting you for the rainy days"
+  },
+  {
+    "id": "f340bebe-be32-4a89-824b-d8d634bcfcb5",
     "name": "In the News",
     "content": "Following the latest news in Singapore, Asia and the World"
   },
-  { "name": "Property", "content": "A roof above your head or more?" },
-  { "name": "Career", "content": "Your biggest income source at the start" },
   {
+    "id": "0144e0e8-e3d8-4d8e-9cf7-12381eddef2f",
+    "name": "Property",
+    "content": "A roof above your head or more?"
+  },
+  {
+    "id": "c70b491f-54b9-45c7-a81a-a24d3dad0b71",
+    "name": "Career",
+    "content": "Your biggest income source at the start"
+  },
+  {
+    "id": "4bcf5b2c-03af-4283-8e23-5a44cef895b3",
     "name": "Fresh Graduates",
     "content": "Young adults out into the working world"
   },
   {
+    "id": "8e938925-751d-4bae-867a-e45feb4c6a09",
     "name": "Tiger Brokers",
     "content": "For all Tiger Brokers related discussions"
   },
-  { "name": "S&P 500 Index", "content": "" },
-  { "name": "Savings Accounts", "content": "Optimising your savings rates" }
+  {
+    "id": "adaf212b-7a99-4c1a-96fa-a8f15f5eeeea",
+    "name": "S&P 500 Index",
+    "content": ""
+  },
+  {
+    "id": "b7a8add5-0a49-4345-b2ce-0b213625d338",
+    "name": "Savings Accounts",
+    "content": "Optimising your savings rates"
+  }
 ]

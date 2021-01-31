@@ -2,56 +2,91 @@
   {
     "id": "88dede45-d1a1-4cfd-98c5-40b241e80e2b",
     "title": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.",
-    "topics": ["Investments", "Stocks Investing", "CPF"]
+    "topics": [
+      "e2df1d4c-1d96-4fbf-a5e2-e5826cf5d910",
+      "66a45c18-b6c2-464c-b735-ce668552a6bb",
+      "fe1e5857-d51f-47c0-ab20-e4ab4cfd5dc8"
+    ]
   },
   {
     "id": "f574037a-188a-4518-bed7-577e2cf7794d",
     "title": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula.",
     "topics": [
-      "Stocks Investing",
-      "Online Brokerages",
-      "Insurance",
-      "In the News"
+      "66a45c18-b6c2-464c-b735-ce668552a6bb",
+      "aefb8e9d-84e6-4119-aa12-06f0e9e2765d",
+      "53bc2f69-2c10-4442-9687-ece86dc64e98",
+      "f340bebe-be32-4a89-824b-d8d634bcfcb5"
     ]
   },
   {
     "id": "eae13789-13d0-4a91-9769-147efd58088d",
     "title": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros.",
-    "topics": ["ETF", "Career", "Tiger Brokers", "S&P 500 Index"]
+    "topics": [
+      "22264fd7-3f8e-4513-a9c2-54a1b0dfacca",
+      "c70b491f-54b9-45c7-a81a-a24d3dad0b71",
+      "8e938925-751d-4bae-867a-e45feb4c6a09",
+      "adaf212b-7a99-4c1a-96fa-a8f15f5eeeea"
+    ]
   },
   {
     "id": "968d50f1-0d77-4bea-8a3c-3ffdc7a0fbc9",
     "title": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.",
-    "topics": ["Lifestyle", "Robo-Advisors"]
+    "topics": [
+      "3f0f6459-d4f1-421d-9f18-23e45cc2fe43",
+      "fcb7c50b-c2ea-403a-bc78-97ce4edf4faa",
+      "b7a8add5-0a49-4345-b2ce-0b213625d338"
+    ]
   },
   {
     "id": "6f9cf30a-9980-41ed-b02a-3f63a38e5ebc",
     "title": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
-    "topics": ["Career"]
+    "topics": [
+      "c70b491f-54b9-45c7-a81a-a24d3dad0b71",
+      "b7a8add5-0a49-4345-b2ce-0b213625d338"
+    ]
   },
   {
     "id": "17922475-299b-482e-8c02-6fe034782e14",
     "title": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
-    "topics": ["Savings", "Fresh Graduates", "Career"]
+    "topics": [
+      "397a557f-31ba-4474-840f-537f95336769",
+      "4bcf5b2c-03af-4283-8e23-5a44cef895b3",
+      "c70b491f-54b9-45c7-a81a-a24d3dad0b71"
+    ]
   },
   {
     "id": "7074fcf6-d7a0-4cc2-a919-b561243fb6ce",
     "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "topics": ["Promo Codes", "Insurance"]
+    "topics": [
+      "62495692-11f2-4b58-b752-323e1a71c6d3",
+      "53bc2f69-2c10-4442-9687-ece86dc64e98"
+    ]
   },
   {
     "id": "845c8429-0e3f-440a-9cbf-48399cf29144",
     "title": "Morbi vel lectus in quam fringilla rhoncus.",
-    "topics": ["Property", "Lifestyle"]
+    "topics": [
+      "0144e0e8-e3d8-4d8e-9cf7-12381eddef2f",
+      "3f0f6459-d4f1-421d-9f18-23e45cc2fe43"
+    ]
   },
   {
     "id": "7d2d1365-c661-4bf9-9e16-10f430597f88",
     "title": "Proin at turpis a pede posuere nonummy. Integer non velit.",
-    "topics": ["Retirement", "Savings", "Tiger Brokers", "Promo Codes"]
+    "topics": [
+      "435e8900-936a-444c-a569-00798b7e1e2f",
+      "397a557f-31ba-4474-840f-537f95336769",
+      "8e938925-751d-4bae-867a-e45feb4c6a09",
+      "62495692-11f2-4b58-b752-323e1a71c6d3"
+    ]
   },
   {
     "id": "5ae1aaf2-5701-4094-a221-a730d118dcae",
     "title": "Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
-    "topics": ["Investments", "Syfe", "Brokerages"]
+    "topics": [
+      "e2df1d4c-1d96-4fbf-a5e2-e5826cf5d910",
+      "1615d596-b319-4efc-ace9-9a652db7db34",
+      "8318f3b7-a5ff-44dd-b83a-f163f26fe02c"
+    ]
   }
 ]

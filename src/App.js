@@ -48,6 +48,7 @@ function App({ match }) {
           <section id="qna" className="ui centered eleven wide column">
             <QnA
               chosenTopic={chosenTopic.topicName}
+              topics={topics}
               questions={questions}
               answers={answers}
               users={users}
