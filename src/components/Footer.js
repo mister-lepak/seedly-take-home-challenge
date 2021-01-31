@@ -5,8 +5,8 @@ import indexCSS from "../css/index.css";
 const Footer = () => {
   return (
     <footer id="footer">
-      <div className="ui equal width stackable grid">
-        <div className="column">
+      <section className="ui equal width stackable grid">
+        <article className="column">
           <div>
             <h4>Company</h4>
           </div>
@@ -25,9 +25,9 @@ const Footer = () => {
           <div>
             <a href="">Terms</a>
           </div>
-        </div>
+        </article>
 
-        <div className="column">
+        <article className="column">
           <div>
             <h4>Product Reviews</h4>
           </div>
@@ -55,9 +55,9 @@ const Footer = () => {
           <div>
             <a href="">Travel Insurance</a>
           </div>
-        </div>
+        </article>
 
-        <div className="column">
+        <article className="column">
           <div>
             <h4>Quick Tools</h4>
           </div>
@@ -67,9 +67,9 @@ const Footer = () => {
           <div>
             <a href="">Levels and Badges</a>
           </div>
-        </div>
+        </article>
 
-        <div className="column">
+        <article className="column">
           <div>
             <h4>Seedly App</h4>
           </div>
@@ -82,9 +82,9 @@ const Footer = () => {
           <div>
             <a href="">Security</a>
           </div>
-        </div>
+        </article>
 
-        <div className="column">
+        <article className="column">
           <div>
             <h4>Download the app</h4>
           </div>
@@ -94,14 +94,14 @@ const Footer = () => {
           <div>
             <img src={google}></img>
           </div>
-        </div>
-      </div>
-      <div id="subFooter">
+        </article>
+      </section>
+      <section id="subFooter">
         <i className="extra large twitter icon"></i>
         <i className="extra large instagram icon"></i>
         <i className="extra large facebook icon"></i>
         <i className="extra large telegram icon"></i>
-      </div>
+      </section>
     </footer>
   );
 };
