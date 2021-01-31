@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import moment from "moment";
+import AnswerText from "./AnswerText";
 
 export const selectFeaturedAnswer = (relatedAnswersInput) => {
   let contender = [
@@ -61,8 +62,11 @@ const QnA = ({ chosenTopic, answers, questions, users }) => {
     });
     const selectedAnswer = selectFeaturedAnswer(relatedAnswers);
 
-    return users.map((user) => {
+    return users.map((user, index) => {
       if (selectedAnswer[0].user === user.id) {
+        // setToggle([...toggle, false]);
+        selectedAnswer[0].toggle = false;
+        console.log(selectedAnswer[0].toggle);
         return (
           <div className="ui event raised segment answers">
             <div className="label">
@@ -77,7 +81,9 @@ const QnA = ({ chosenTopic, answers, questions, users }) => {
                   {user.level} Answered {assessDate(selectedAnswer[0].date)}
                 </p>
               </div>
-              <div className="extra-text">{selectedAnswer[0].content}</div>
+              <div className="extra-text">
+                <AnswerText text={selectedAnswer[0].content} />
+              </div>
               <div className="meta">
                 <button className="circular ui basic icon button">
                   <i className="comment icon"></i>
