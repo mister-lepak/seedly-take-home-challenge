@@ -22,6 +22,7 @@ This application is built with the following functions as per instructions state
 
 - [x] Rendering of UI (navbar, banner, sidebar, Q&As, Advertisement, Footer)
 - [x] Sidebar and tags links are able to filter the related questions
+- [x] Separate Topic detailed page is rendered when the specific topics (from sidebars or question's tags) are clicked
 - [x] Featured answer assessment capability is brought forward to frontend
   - Assuming data received from backend are not processed
   - This is done with the motivation of showcasing data cleaning capability in this code challenge
@@ -61,8 +62,9 @@ All states are solely located in centralized component -- i.e. App component
 
 External library used declared below:
 
-- Moment.js
-- React-router-dom
+- [Sematic UI](https://semantic-ui.com/) for CSS library framework
+- [Moment.js](https://momentjs.com/) for Date Formatting library
+- [React-router-dom] (https://www.npmjs.com/package/react-router-dom) for React Routing
 
 ## Testing
 
