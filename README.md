@@ -75,5 +75,5 @@ Testing is done at the unit testing level
 - Layouts Aesthetics
 - Fonts
 - Status (Recent, Unanswered, Trending, Editoral)
-- Top Navbar
+- Top Navbar Links
 - Pagination of questions when database comes in large size
