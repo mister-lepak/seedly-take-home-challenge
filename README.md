@@ -59,6 +59,8 @@ All states are solely located in centralized component -- i.e. App component
 
 ## Dependencies
 
+External library used declared below:
+
 - Moment.js
 - React-router-dom
 
