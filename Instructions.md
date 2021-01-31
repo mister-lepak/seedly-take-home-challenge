@@ -1,4 +1,4 @@
-Seedly Community (https://seedly.sg/community)
+[Seedly Community] (https://seedly.sg/community)
 
 # Sections to Develop
 
@@ -18,7 +18,7 @@ This exists within the Community home page and it lists the questions and the fe
 
 Upon clicking on a topic from the sidebar, page will render with the relevant questions that are tagged to the topic.
 
-You are not required to work on the followres and following portion.
+You are not required to work on the followers and following portion.
 
 # Requirements
 
