@@ -35,27 +35,27 @@ function App({ match }) {
         topicsHasError ? (
         <div>Error Occured.</div>
       ) : (
-        <div className="ui grid">
-          <div className="ui row">
+        <main className="ui grid">
+          <nav className="ui row">
             <Navbar />
-          </div>
-          <div className="ui row">
+          </nav>
+          <header className="ui row">
             <Banner chosenTopic={chosenTopic.topicName} topics={topics} />
-          </div>
-          <div id="sidebar" className="ui three wide column">
+          </header>
+          <aside id="sidebar" className="ui three wide column">
             <Sidebar topics={topics} />
-          </div>
-          <div id="qna" className="ui centered eleven wide column">
+          </aside>
+          <section id="qna" className="ui centered eleven wide column">
             <QnA
               chosenTopic={chosenTopic.topicName}
               questions={questions}
               answers={answers}
               users={users}
             />
-          </div>
-          <div id="advertisement" className="ui two wide column"></div>
+          </section>
+          <aside id="advertisement" className="ui two wide column"></aside>
           <Footer />
-        </div>
+        </main>
       )}
     </>
   );

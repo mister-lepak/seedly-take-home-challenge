@@ -64,11 +64,8 @@ const QnA = ({ chosenTopic, answers, questions, users }) => {
 
     return users.map((user, index) => {
       if (selectedAnswer[0].user === user.id) {
-        // setToggle([...toggle, false]);
-        selectedAnswer[0].toggle = false;
-        console.log(selectedAnswer[0].toggle);
         return (
-          <div className="ui event raised segment answers">
+          <article className="ui event raised segment answers">
             <div className="label">
               <img src={user.avatar} />
             </div>
@@ -100,7 +97,7 @@ const QnA = ({ chosenTopic, answers, questions, users }) => {
                 </button>
               </div>
             </div>
-          </div>
+          </article>
         );
       }
     });
@@ -112,10 +109,10 @@ const QnA = ({ chosenTopic, answers, questions, users }) => {
     return questions.map((question) => {
       if (chosenTopic === "") {
         return (
-          <div className="ui container segment">
+          <article className="ui container segment">
             {renderQuestionTopics(question)}
             <h3>{question.title}</h3>
-            <div className="ui row">
+            <article className="ui row">
               <button className="ui basic circular left floated button">
                 Follow
               </button>
@@ -125,14 +122,16 @@ const QnA = ({ chosenTopic, answers, questions, users }) => {
               <button className="ui basic right floated button">
                 {countAnswers(question)} Answers
               </button>
-            </div>
-            <div className="ui feed">{renderFeaturedAnswer(question)}</div>
-          </div>
+            </article>
+            <article className="ui feed">
+              {renderFeaturedAnswer(question)}
+            </article>
+          </article>
         );
       } else {
         if (question.topics.includes(chosenTopic)) {
           return (
-            <div className="ui container segment">
+            <article className="ui container segment">
               {renderQuestionTopics(question)}
               <h3>{question.title}</h3>
 
@@ -147,8 +146,10 @@ const QnA = ({ chosenTopic, answers, questions, users }) => {
                 {countAnswers(question)} Answers
               </button>
 
-              <div className="ui feed">{renderFeaturedAnswer(question)}</div>
-            </div>
+              <article className="ui feed">
+                {renderFeaturedAnswer(question)}
+              </article>
+            </article>
           );
         }
       }
@@ -156,16 +157,16 @@ const QnA = ({ chosenTopic, answers, questions, users }) => {
   };
 
   return (
-    <div className="ui grid">
-      <div className="ui four item text menu">
+    <section className="ui grid">
+      <article className="ui four item text menu">
         <a className="item">Recent</a>
         <a className="item">Unanswered</a>
         <a className="item">Trending</a>
         <a className="item">Editoral</a>
-      </div>
+      </article>
 
       {renderQuestions(chosenTopic)}
-    </div>
+    </section>
   );
 };
 

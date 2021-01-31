@@ -5,19 +5,19 @@ const Sidebar = ({ topics }) => {
     if (!topics) return <></>;
     return topics.map((topic) => {
       return (
-        <div className="item">
+        <article className="item">
           <Link to={"/topic/" + topic.name}>{topic.name}</Link>
-        </div>
+        </article>
       );
     });
   };
 
   return (
-    <div className="ui vertical menu">
+    <aside className="ui vertical menu">
       <Link className="item" to="/">
         All Content
       </Link>
-      <div className="item">
+      <section className="item">
         <h1>My Topics</h1>
         <p>Have a topic in mind?</p>
         <p>Follow some topics and they'll show up here.</p>
@@ -25,12 +25,12 @@ const Sidebar = ({ topics }) => {
           <i className="icon compass " />
           Discover Topics
         </button>
-      </div>
-      <div className="item">
+      </section>
+      <section className="item">
         <h2>Featured Topic</h2>
-        <div className="menu">{renderTopic()}</div>
-      </div>
-    </div>
+        <section className="menu">{renderTopic()}</section>
+      </section>
+    </aside>
   );
 };
 
