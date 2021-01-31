@@ -18,11 +18,11 @@ Instructions to Seedly take-home challenge can be found in [Instructions.md](htt
 
 ## Delivery Details
 
-This application built with following functions as per instructions stated in [Instructions.md](https://github.com/mrlepak/seedly-take-home-challenge/blob/main/Instructions.md). Key highlights below:
+This application is built with the following functions as per instructions stated in [Instructions.md](https://github.com/mrlepak/seedly-take-home-challenge/blob/main/Instructions.md). Key highlights below:
 
 - [x] Rendering of UI (navbar, banner, sidebar, Q&As, Advertisement, Footer)
 - [x] Sidebar and tags links are able to filter the related questions
-- [x] Featured answer assessment capabilitiy is brought forward to frontend
+- [x] Featured answer assessment capability is brought forward to frontend
   - Assuming data received from backend are not processed
   - This is done with the motivation of showcasing data cleaning capability in this code challenge
   - Featured answer's selection criteria is as per [Seedly's FAQ](https://support.seedly.sg/hc/en-us/articles/900003311886-Managing-your-Questions-and-Answers)
@@ -45,11 +45,11 @@ This application built with following functions as per instructions stated in [I
 5. Comments
    - This model is the data source for the comments posted and linked to related answers and users who commented
 
-Futher details of the Data Structure can be refered in the [ModelStructure.md](https://github.com/mrlepak/seedly-take-home-challenge/blob/main/public/models/ModelStructure.md)
+Further details of the Data Structure can be referred in the [ModelStructure.md](https://github.com/mrlepak/seedly-take-home-challenge/blob/main/public/models/ModelStructure.md)
 
 ## Design of Data Structures
 
-The design of this data structure is assuming backend database did not provide necessary data population.
+The design of this data structure is assuming the backend database did not provide the necessary data population.
 Hence, data assessment such as selecting Featured Answers and Dates formatting is done at the frontend.
 
 ## State Management
