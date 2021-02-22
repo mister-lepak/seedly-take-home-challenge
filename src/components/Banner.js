@@ -7,12 +7,9 @@ const Banner = ({ topics, chosenTopic }) => {
 
   if (chosenTopic !== "") {
     if (!topics) return <></>;
-    topics.map((topic) => {
-      if (chosenTopic === topic.name) {
-        displayHeader = topic.name;
-        displaySubHeader = topic.content;
-      }
-    });
+    const foundTopic = topics.find((topic) => topic.name === chosenTopic);
+    displayHeader = foundTopic.name;
+    displaySubHeader = foundTopic.content;
   }
   return (
     <>
