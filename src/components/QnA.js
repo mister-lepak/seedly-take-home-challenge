@@ -44,21 +44,18 @@ const QnA = ({ chosenTopic, topics, answers, questions, users, comments }) => {
     );
   };
 
+  const chosenTopicNotExist = (chosenTopic) => {
+    if (topics.find((topic) => topic.name === chosenTopic)) return true;
+    return false;
+  };
+
   const renderQuestions = (chosenTopic) => {
     if (!questions || !answers || !users) return <></>;
 
     return questions.map((question) => {
-      if (chosenTopic === "") {
-        return renderQuestionDetails(question);
-      } else {
-        let chosenTopicId = "";
-        topics.map((topic) => {
-          if (topic.name === chosenTopic) chosenTopicId = topic.id;
-        });
-        if (question.topics.includes(chosenTopicId)) {
-          return renderQuestionDetails(question);
-        }
+      if (chosenTopic !== "" && chosenTopicNotExist(chosenTopic)) {
       }
+      return renderQuestionDetails(question);
     });
   };
 
