@@ -4,20 +4,16 @@ import FeaturedAnswer from "./FeaturedAnswer";
 
 const QnA = ({ chosenTopic, topics, answers, questions, users, comments }) => {
   const renderQuestionTopics = (question) => {
-    return question.topics.map((topic) => {
-      return topics.map((element) => {
-        if (topic === element.id) {
-          return (
-            <>
-              <Link className="ui button" to={"/topic/" + element.name}>
-                {element.name}
-              </Link>
-            </>
-          );
-        }
-        return <></>;
-      });
-    });
+    return question.topics
+      .map((questionTopicID) =>
+        topics.find((topic) => topic.id === questionTopicID)
+      )
+      .filter((questionTopic) => questionTopic != null)
+      .map((questionTopic) => (
+        <Link className="ui button" to={"/topic/" + questionTopic.name}>
+          {questionTopic.name}
+        </Link>
+      ));
   };
 
   const renderQuestionDetails = (question) => {
