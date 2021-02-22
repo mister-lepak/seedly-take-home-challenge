@@ -84,4 +84,15 @@ body {
   #mobileNav {
     display: flex;
   }
+
+  .ui.grid > [class*="eleven wide"].column {
+    width: 100% !important;
+  }
+  .ui.grid {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .ui.container {
+    margin-right: 0 !important;
+  }
 }

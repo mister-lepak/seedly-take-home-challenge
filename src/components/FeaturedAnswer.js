@@ -6,10 +6,10 @@ import { useState } from "react";
 const FeaturedAnswer = ({ question, users, answers, comments }) => {
   const [commentShow, setCommentShow] = useState(false);
 
-  const relatedAnswers = [];
+  let relatedAnswers = [];
   answers.map((answer) => {
     if (answer.question_id === question.id) {
-      relatedAnswers.push(answer);
+      relatedAnswers = relatedAnswers.concat(answer);
     }
   });
   const selectedAnswer = selectFeaturedAnswer(relatedAnswers);
